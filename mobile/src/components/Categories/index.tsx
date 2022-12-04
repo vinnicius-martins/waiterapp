@@ -30,7 +30,7 @@ export function Categories() {
             onPress={() => handleSelectCategory(category._id)}
           >
             <Icon>
-              <Text opacity={(isSelected || selectedCategory === '') ? 1 : 0.5}>
+              <Text opacity={(isSelected || !selectedCategory) ? 1 : 0.5}>
                 {category.icon}
               </Text>
             </Icon>
@@ -38,7 +38,7 @@ export function Categories() {
             <Text
               size={14}
               weight='600'
-              opacity={(isSelected || selectedCategory === '') ? 1 : 0.5}
+              opacity={(isSelected || !selectedCategory) ? 1 : 0.5}
             >
               {category.name}
             </Text>
