@@ -1,3 +1,4 @@
+import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { Modal, TouchableOpacity } from 'react-native';
 import { isAndroid } from '../../utils/platform';
@@ -27,6 +28,8 @@ export function TableModal({ visible, onClose, onSave }: TableModalProps) {
       transparent
       animationType='fade'
     >
+      <StatusBar backgroundColor='rgba(0, 0, 0, 0.6)' style='dark'/>
+
       <Overlay behavior={ isAndroid ? 'height' : 'padding' }>
         <ModalBody>
           <Header>

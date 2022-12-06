@@ -16,7 +16,7 @@ export default function App() {
 
   return (
     <>
-      <StatusBar style='dark' />
+      <StatusBar backgroundColor='#fafafa' style='dark' />
       <Main />
     </>
   );
