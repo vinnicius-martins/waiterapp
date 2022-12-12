@@ -2,8 +2,9 @@ import path from 'node:path';
 import express from 'express';
 import mongoose from 'mongoose';
 import { router } from './router';
+import { Product } from './app/models/Product';
 
-mongoose.connect('mongodb://localhost:27017')
+mongoose.connect('mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.0')
   .then(() => {
     const app = express();
     const PORT = 3001;
@@ -14,6 +15,7 @@ mongoose.connect('mongodb://localhost:27017')
     app.use(router);
 
     app.listen(PORT, () => {
+      // Product.deleteOne({ _id: '638ec0ded9d55c982286e5e6'});
       console.log(`🚀 Server is running on http://localhost:${PORT}`);
     });
   })
