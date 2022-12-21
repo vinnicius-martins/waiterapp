@@ -12,6 +12,8 @@ import { listOrders } from './app/useCases/orders/listOrders';
 import { createOrder } from './app/useCases/orders/createOrder';
 import { changeOrderStatus } from './app/useCases/orders/changeOrderStatus';
 import { cancelOrder } from './app/useCases/orders/cancelOrder';
+import { deleteCategory } from './app/useCases/categories/deleteCategory';
+import { deleteProduct } from './app/useCases/products/deleteProduct';
 
 const upload = multer({
   storage: multer.diskStorage({
@@ -29,11 +31,13 @@ export const router = Router();
 // Category
 router.get('/categories', listCategories);
 router.post('/categories', createCategory);
+router.delete('/categories/:categoryId', deleteCategory);
 router.get('/categories/:categoryId/products', listProductsByCategory);
 
 // Product
 router.get('/products', listProducts);
 router.post('/products', upload.single('image'), createProduct);
+router.delete('/products/:categoryId', deleteProduct);
 
 // Order
 router.get('/orders', listOrders);

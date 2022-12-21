@@ -1,6 +1,7 @@
 {
   "env": {
-    "es2021": true
+    "es2021": true,
+    "node": true
   },
   "extends": [
     "eslint:recommended",
@@ -19,6 +20,7 @@
     "@typescript-eslint"
   ],
   "rules": {
+    "@typescript-eslint/no-var-requires": "off",
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "indent": [

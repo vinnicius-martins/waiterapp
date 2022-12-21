@@ -59,14 +59,14 @@ export function Cart({ cartItems, onAdd, onDecrement, onConfirmOrder, selectedTa
       {cartItems.length > 0 &&
         <FlatList
           showsVerticalScrollIndicator={false}
-          style={{ marginBottom: 20, maxHeight: 140 }}
+          style={{ marginBottom: 20, maxHeight: 90 }}
           data={cartItems}
           keyExtractor={(cartItem) => cartItem.product._id}
           renderItem={({item: cartItem}) => (
             <Item>
               <ProductContainer>
                 <Image
-                  source={{ uri: `http://192.168.1.5:3001/uploads/${cartItem.product.imagePath}` }}
+                  source={{ uri: `http://192.168.1.6:3001/uploads/${cartItem.product.imagePath}` }}
                 />
 
                 <QuantityContainer>

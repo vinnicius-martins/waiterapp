@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "620574636885",
+    "project_id": "waiterapp-5124c",
+    "storage_bucket": "waiterapp-5124c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:620574636885:android:ec25b108ae8fa1042bcddc",
+        "android_client_info": {
+          "package_name": "com.vinniciusmartins.waiterapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "620574636885-un0ptb51opom2v7vajeddc4mf7rlvc2t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCk2li2mgGIiHALv-li5Y7IvPJ-92eXFw8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "620574636885-un0ptb51opom2v7vajeddc4mf7rlvc2t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -9,8 +9,11 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@react-native-firebase/app": "^16.5.0",
+    "@react-native-firebase/messaging": "^16.5.0",
     "axios": "^1.2.1",
     "expo": "~47.0.8",
+    "expo-dev-client": "~2.0.1",
     "expo-font": "~11.0.1",
     "expo-status-bar": "~1.4.2",
     "intl": "^1.2.5",
