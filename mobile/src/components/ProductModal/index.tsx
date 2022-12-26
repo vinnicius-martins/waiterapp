@@ -15,6 +15,7 @@ import {
   ModalBody,
   PriceContainer,
 } from './styles';
+import { API_IP } from '../../constants/api';
 
 interface ProductModalProps {
   visible: boolean;
@@ -40,7 +41,7 @@ export function ProductModal({ visible, onClose, product, onAddToCart }: Product
     >
       <Image
         source={{
-          uri: `http://192.168.1.6:3001/uploads/${product.imagePath}`,
+          uri: `http://${API_IP}:3001/uploads/${product.imagePath}`,
         }}
       >
         <CloseButton onPress={onClose}>

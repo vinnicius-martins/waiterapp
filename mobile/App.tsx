@@ -17,8 +17,9 @@ export default function App() {
 
   useEffect(() => {
     async function requestUserPermission() {
-      const authStatus = await messaging().requestPermission();
-      console.log('Authorization status:', authStatus);
+      await messaging().requestPermission();
+      // const authStatus = await messaging().requestPermission();
+      // console.log('Authorization status:', authStatus);
     }
 
     requestUserPermission();
@@ -40,14 +41,6 @@ export default function App() {
     messaging().setBackgroundMessageHandler(async remoteMessage => {
       console.log('Message handled in the background!', remoteMessage);
     });
-  }, []);
-
-  useEffect(() => {
-    const unsubscribe = messaging().onMessage(async remoteMessage => {
-      console.log('A new FCM message arrived!', JSON.stringify(remoteMessage));
-    });
-
-    return unsubscribe;
   }, []);
 
   if (!isFontsLoaded) return null;

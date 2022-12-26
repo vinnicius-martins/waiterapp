@@ -10,6 +10,7 @@ import { PlusCircle } from '../Icons/PlusCircle';
 import { OrderConfirmedModal } from '../OrderConfirmedModal';
 import { Text } from '../Text';
 import { Actions, Image, Item, ProductContainer, ProductDetails, QuantityContainer, Summary, TotalContainer } from './styles';
+import { API_IP } from '../../constants/api';
 
 interface CartProps {
   cartItems: CartItemProps[];
@@ -66,7 +67,7 @@ export function Cart({ cartItems, onAdd, onDecrement, onConfirmOrder, selectedTa
             <Item>
               <ProductContainer>
                 <Image
-                  source={{ uri: `http://192.168.1.6:3001/uploads/${cartItem.product.imagePath}` }}
+                  source={{ uri: `http://${API_IP}:3001/uploads/${cartItem.product.imagePath}` }}
                 />
 
                 <QuantityContainer>

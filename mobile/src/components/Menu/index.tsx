@@ -8,6 +8,7 @@ import { Text } from '../Text';
 
 import { formatCurrency } from '../../utils/formatCurrency';
 import { PlusCircle } from '../Icons/PlusCircle';
+import { API_IP } from '../../constants/api';
 
 interface MenuProps {
   onAddToCart: (product: ProductProps) => void;
@@ -41,7 +42,7 @@ export function Menu({ onAddToCart, products } :MenuProps) {
           <Product onPress={() => handleOpenModal(product)}>
             <ProductImage
               source={{
-                uri: `http://192.168.1.6:3001/uploads/${product.imagePath}`,
+                uri: `http://${API_IP}:3001/uploads/${product.imagePath}`,
               }}
             />
             <ProductDetails>
